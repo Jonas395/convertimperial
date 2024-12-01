@@ -27,7 +27,7 @@ function convertInchesToCm(inches) {
   // Regular expressions to find imperial units in the text
   const regexPatterns = [
     { regex: /\b(\d+(\.\d+)?)\s?inches?\b/g, convert: convertInchesToCm },
-    { regex: /\b(\d+(\.\d+)?)\s?"\b/g, convert: convertInchesToCm },
+    { regex: /\b(\d+(\.\d+)?)\s?(?=")\b/g, convert: convertInchesToCm },
     { regex: /\b(\d+(\.\d+)?)\s?feet\b/g, convert: convertFeetToMeters },
     { regex: /\b(\d+(\.\d+)?)\s?ft\b/g, convert: convertFeetToMeters },
     { regex: /\b(\d+(\.\d+)?)\s?miles?\b/g, convert: convertMilesToKilometers },
